@@ -121,7 +121,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #        while switching new audio HAL from legacy HAL
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.audio.handset.mic.type=digital \
-	persist.audio.dualmic.config=endfire \
+	persist.audio.dualmic.config=true \
 	persist.audio.fluence.voicecall=true \
 	persist.audio.handset.mic=dmic \
 	persist.audio.fluence.mode=endfire \
@@ -212,7 +212,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.sensors.smd=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	persist.sys.usb.config=mtp
+	persist.sys.usb.config=mtp\
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        persist.gps.qmienabled=true 
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/fetch-swv:system/bin/fetch-swv
